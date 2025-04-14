@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Habitat Monitoring using WSNs</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("space1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background: #0d0d0d; */
+        color: #fff;
+        padding: 2rem;
+        font-size: 20px;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      h1 {
+        color: #00ffff;
+      }
+      section {
+        margin-bottom: 2rem;
+        background: #1a1a1a;
+        padding: 1.2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+      }
+      h2 {
+        color: #00ffcc;
+      }
+      p {
+        line-height: 1.6;
+      }
+      .more-text {
+        display: none;
+        margin-top: 1rem;
+      }
+      .read-more {
+        background-color: #00ffff;
+        border: none;
+        color: #000;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 1rem;
+      }
+      p {
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+    display: inline-block; /* Make the text block-level for transformations */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 16px; /* Set a base font size */
+  }
+
+
+
+      h1, h3, h4, h5, h6 {
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+  }
+
+  /* Hover Effect - Highlight on Hover */
+  h1:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    background-color: #f5e3b3; /* Soft background color */
+    color: #333; /* Text color change */
+    padding: 5px; /* Add padding for better effect */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: underline; /* Underline text on hover */
+  }
+      table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: tableAnimation 1s ease-in-out;
+  }
+
+  /* Table border styles */
+  th, td {
+    border: 3px solid #333; /* Thick border */
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Header background and text styling */
+  th {
+    background-color: #4CAF50; /* Green header */
+    color: white;
+    font-weight: bold;
+  }
+
+  /* Row hover effect */
+  tr:hover {
+    background-color: plum;
+    color:blue;
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease;
+  }
+
+  /* Animation for table appearance */
+  @keyframes tableAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Add animation for individual cells */
+  td, th {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  td:nth-child(odd), th:nth-child(odd) {
+    animation-delay: 0.2s;
+  }
+
+  td:nth-child(even), th:nth-child(even) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Space Habitat Monitoring with WSNs</h1>
+      <p>Futuristic WSN Applications for Long-Term Space Missions</p>
+    </header>
+
+    <section>
+      <h2>1. Detect Leaks</h2>
+      <p>Detects air, water, or radiation leaks for astronaut safety.</p>
+      <div class="more-text" id="more1">
+        <p>
+          Using specialized sensors and WSNs, space habitats can detect life-threatening leaks. Sensors monitor air pressure, gas levels, and radiation to alert the crew instantly if any breach or anomaly is detected. This system helps ensure habitat safety and integrity in hostile space environments.
+        </p>
+      
+        <h4>🔓 What is a Leak in Space?</h4>
+        <p>
+          In space habitats, a leak refers to any unintended release or loss of vital resources such as:
+        </p>
+        <ul>
+          <li>Air (oxygen, nitrogen, cabin pressure)</li>
+          <li>Water (from life support, tanks, or pipelines)</li>
+          <li>Radiation (entering due to shield damage)</li>
+        </ul>
+        <p>Even a tiny leak can be life-threatening in the vacuum of space.</p>
+      
+        <h4>💡 How WSNs Help</h4>
+        <p>
+          Wireless Sensor Networks (WSNs) use compact, distributed sensors to detect and report leaks. Sensors can be placed at:
+        </p>
+        <ul>
+          <li>Cabin walls, seams, and joints</li>
+          <li>Air ducts and pipelines</li>
+          <li>Water tanks or recycling units</li>
+          <li>Windows and radiation shielding panels</li>
+        </ul>
+        <p>
+          These sensors continuously transmit data. Any abnormal pressure drop or radiation spike triggers an alert.
+        </p>
+      
+        <h4>🧪 Example Sensors Used</h4>
+        <table border="1" cellpadding="6" style="border-collapse: collapse;">
+          <tr><th>Leak Type</th><th>Sensor</th><th>What It Detects</th></tr>
+          <tr><td>Air Leak</td><td>Pressure sensor</td><td>Cabin pressure drop</td></tr>
+          <tr><td>Gas Leak</td><td>MQ135 gas sensor</td><td>CO₂ or O₂ anomalies</td></tr>
+          <tr><td>Water Leak</td><td>Moisture sensor</td><td>Unexpected humidity</td></tr>
+          <tr><td>Radiation</td><td>Geiger counter</td><td>Gamma or X-ray presence</td></tr>
+        </table>
+      
+        <h4>✅ Advantages</h4>
+        <ul>
+          <li>Early detection can save lives</li>
+          <li>Real-time alerts to crew and control</li>
+          <li>Compact, wireless sensors suit modular space habitats</li>
+          <li>Automatic isolation of damaged sections possible</li>
+        </ul>
+      
+        <h4>❌ Why Not Fully Used Yet?</h4>
+        <ul>
+          <li>Extreme environments challenge sensor durability</li>
+          <li>Wireless signals weaken in metal or shielded walls</li>
+          <li>Powering sensors long-term is complex</li>
+          <li>False alarms or undetected leaks could be fatal</li>
+        </ul>
+      
+        <h4>⚠️ Disadvantages</h4>
+        <ul>
+          <li>Need for high accuracy (especially in gas detection)</li>
+          <li>Risk of sensor errors in harsh conditions</li>
+          <li>Backup systems still required</li>
+        </ul>
+      
+        <h4>🧪 In Your Project (Simulation Scope)</h4>
+        <p>You can simulate this leak detection system using:</p>
+        <ul>
+          <li>DHT11/DHT22 sensors (simulate temperature/humidity → water leak)</li>
+          <li>MQ135 gas sensor (simulate CO₂/O₂ fluctuations)</li>
+          <li>BMP280 (for digital air pressure data)</li>
+          <li>ThingSpeak or Node-RED (for visual dashboards)</li>
+        </ul>
+      </div>
+      
+      <button class="read-more" onclick="toggleText('more1')">Read More</button>
+    </section>
+
+    <section>
+      <h2>2. Monitor Structural Integrity</h2>
+      <p>Detects cracks or pressure damage in habitat walls.</p>
+      <!-- <div class="more-text" id="more2">
+        
+      </div> -->
+      <div class="more-text" id="more2">
+        <h4>🏗️ Monitor Structural Integrity in Space Habitats</h4>
+        <p>
+          Ensuring the structural health of space habitats is vital for long-term missions. Spacecrafts and space stations are subjected to extreme stresses, including launch, microgravity, temperature fluctuations, and cosmic radiation. Monitoring these stresses can help prevent structural failure and ensure astronaut safety.<br>
+          <p>
+            WSN-based vibration and strain sensors placed on habitat walls and
+            joints can detect microcracks, pressure changes, or stress damage.
+            These sensors act as an early warning system, identifying structural
+            fatigue before catastrophic failure occurs.
+          </p>
+        </p>
+      
+        <h4>🔍 What is “Structural Integrity Monitoring”?</h4>
+        <p>
+          It involves tracking the physical health of habitat components, including walls, joints, and key infrastructure. This includes:
+        </p>
+        <ul>
+          <li>Vibration and strain</li>
+          <li>Stress on critical joints</li>
+          <li>Cracks or material fatigue</li>
+          <li>Temperature-induced stress</li>
+        </ul>
+        <p>
+          Any failure in the habitat's structure can be catastrophic, so continuous monitoring is essential to detect early signs of damage and prevent disasters.
+        </p>
+      
+        <h4>🛰️ Why WSNs Are Ideal for This</h4>
+        <p>
+          Wireless Sensor Networks are perfectly suited for monitoring structural integrity in space habitats due to their ability to cover large and often inaccessible areas without the need for wiring. WSNs can:
+        </p>
+        <ul>
+          <li>Place small sensors at critical points (walls, joints, floor/ceiling connections)</li>
+          <li>Detect strain or vibrations that could indicate stress or damage</li>
+          <li>Send real-time data to a central system for analysis</li>
+          <li>Alert astronauts if an issue is detected, such as a crack or joint failure</li>
+        </ul>
+      
+        <h4>🔧 Example Sensors You Can Use</h4>
+        <table border="1" cellpadding="6" style="border-collapse: collapse;">
+          <tr><th>Sensor Type</th><th>What It Measures</th><th>Use</th></tr>
+          <tr><td>Strain Gauges</td><td>Strain and stress on materials</td><td>Detect cracks or bending</td></tr>
+          <tr><td>Accelerometers</td><td>Vibrations and movement</td><td>Measure structural vibrations</td></tr>
+          <tr><td>Piezoelectric Sensors</td><td>Vibration and shock</td><td>Detect unexpected forces</td></tr>
+          <tr><td>Temperature Sensors</td><td>Temperature variation</td><td>Monitor thermal stress</td></tr>
+        </table>
+      
+        <h4>✅ Advantages of WSNs in Structural Integrity Monitoring</h4>
+        <ul>
+          <li>Real-time data collection without the need for wired infrastructure</li>
+          <li>Continuous monitoring over long periods</li>
+          <li>Small, wireless sensors that can be easily placed at various locations</li>
+          <li>Increased reliability by detecting issues before they become catastrophic</li>
+        </ul>
+      
+        <h4>❌ Why It’s Not Fully Used in Space Yet</h4>
+        <ul>
+          <li>Space systems must endure extreme conditions, making sensor durability critical</li>
+          <li>Powering wireless sensors long-term in space can be challenging</li>
+          <li>Signal interference may occur due to shielding and material properties of the habitat</li>
+          <li>Sensors must be highly accurate to detect early-stage failures</li>
+        </ul>
+      
+        <h4>🌍 Your Simulation Idea</h4>
+        <ul>
+          <li>Use accelerometers or strain gauges to detect vibrations or stress</li>
+          <li>Simulate this with a microcontroller like Arduino or ESP32</li>
+          <li>Build a control dashboard with ThingSpeak, Node-RED, or Blynk</li>
+          <li>Visualize data: Red = Stress detected, Green = Safe</li>
+        </ul>
+      
+        <h4>💡 Let me know if you'd like:</h4>
+        <ul>
+          <li>A complete circuit diagram for strain sensors</li>
+          <li>Code for Arduino/ESP32 to read strain/vibration data</li>
+          <li>A dashboard UI design for monitoring integrity</li>
+          <li>PowerPoint explanation for the project setup</li>
+        </ul>
+      </div>
+      
+      <button class="read-more" onclick="toggleText('more2')">Read More</button>
+    </section>
+
+    <section>
+      <h2>3. Provide Internal Climate Control</h2>
+      <p>Controls temperature, humidity, and gas levels wirelessly.</p>
+      <div class="more-text" id="more3">
+        <h4>🌡️ Internal Climate Control using WSNs</h4>
+        <p>
+          Wireless Sensor Networks (WSNs) can help monitor and regulate climate inside space habitats to ensure astronaut safety and comfort.<br>
+          <p>
+            Wireless sensors can monitor temperature, humidity, oxygen, and CO₂
+            levels in different zones of the habitat. Based on data, climate
+            systems can automatically adjust heating, airflow, and gas levels to
+            ensure comfort and safety for astronauts.
+          </p>
+        </p>
+      
+        <h4>🔍 What is “Internal Climate Control”?</h4>
+        <p>
+          It refers to controlling environmental conditions such as:
+        </p>
+        <ul>
+          <li>Temperature</li>
+          <li>Humidity</li>
+          <li>Air quality (O₂, CO₂, toxins)</li>
+          <li>Air pressure</li>
+          <li>Ventilation or airflow</li>
+        </ul>
+        <p>
+          On Earth, HVAC systems handle this. In space, every aspect must be actively managed due to the absence of natural atmosphere or gravity.
+        </p>
+      
+        <h4>🛰 Why WSNs Are Ideal for This</h4>
+        <p>
+          WSNs offer a flexible, wireless approach to monitoring changing or modular habitats:
+        </p>
+        <ul>
+          <li>Track climate data from multiple areas (e.g., bedroom, lab, greenhouse)</li>
+          <li>Send data to a central system for analysis</li>
+          <li>Trigger fans, heaters, or CO₂ scrubbers automatically</li>
+          <li>Alert astronauts if dangerous conditions arise</li>
+        </ul>
+      
+        <h4>🔧 Example Sensors You Can Use</h4>
+        <table border="1" cellpadding="6" style="border-collapse: collapse;">
+          <tr><th>Sensor Type</th><th>What It Measures</th><th>Use</th></tr>
+          <tr><td>DHT11 / DHT22</td><td>Temperature & Humidity</td><td>Comfort & condensation control</td></tr>
+          <tr><td>MQ135</td><td>Gas levels (CO₂, toxins)</td><td>Air quality monitoring</td></tr>
+          <tr><td>BMP280 / BME280</td><td>Pressure, Temp, Humidity</td><td>Cabin pressure stability</td></tr>
+          <tr><td>Ventilation Sensor</td><td>Airflow</td><td>Check circulation</td></tr>
+        </table>
+      
+        <h4>✅ Advantages</h4>
+        <ul>
+          <li>Real-time control of climate systems</li>
+          <li>Wireless and easy to install or move</li>
+          <li>Supports modular expansion</li>
+          <li>Less manual work for astronauts</li>
+        </ul>
+      
+        <h4>❌ Why It’s Not Fully Used in Space Yet</h4>
+        <ul>
+          <li>Space systems must be extremely reliable</li>
+          <li>Wireless interference may occur inside metal habitats</li>
+          <li>Battery life of sensors must be long-lasting</li>
+          <li>Wired backups are preferred for critical systems</li>
+        </ul>
+      
+        <h4>🧪 In Your Project (Simulation Scope)</h4>
+        <ul>
+          <li>Use DHT11/DHT22 for temp & humidity</li>
+          <li>Use MQ135 for CO₂/gas levels</li>
+          <li>Connect with Arduino or ESP32</li>
+          <li>Build dashboard in ThingSpeak, Node-RED, or Blynk</li>
+          <li>Visual alerts: Green = Safe, Red = Danger</li>
+        </ul>
+      </div>
+      
+      <button class="read-more" onclick="toggleText('more3')">Read More</button>
+    </section>
+
+    <section>
+      <h2>4. Enable Astronaut Health Monitoring</h2>
+      <p>Tracks astronauts' vital signs in real time.</p>
+      <div class="more-text" id="more4">
+        <h4>🩺 Enable Astronaut Health Monitoring</h4>
+        <p>
+          Astronauts' health is crucial during space missions. Monitoring vital signs like heart rate, blood pressure, oxygen levels, and temperature is necessary for ensuring astronaut safety, especially in the harsh conditions of space. Continuous health monitoring also helps detect early signs of potential health issues before they become serious.<br>
+          <p>
+            Wearable wireless sensors track astronauts' vitals such as heart rate,
+            temperature, oxygen saturation, and motion. This real-time health
+            monitoring system supports early medical intervention and continuous
+            analysis, essential for long-duration missions.
+          </p>
+        </p>
+      
+        <h4>🔍 What is “Health Monitoring”?</h4>
+        <p>
+          Health monitoring involves tracking physiological parameters of astronauts to ensure they are fit and to prevent or identify any health issues early. This includes:
+        </p>
+        <ul>
+          <li>Heart rate</li>
+          <li>Blood pressure</li>
+          <li>Oxygen saturation (SpO₂)</li>
+          <li>Body temperature</li>
+          <li>Breathing rate</li>
+        </ul>
+        <p>
+          In space, the absence of gravity and high levels of radiation can stress astronauts’ bodies, so it’s important to monitor these indicators continuously to ensure that they stay healthy and safe throughout the mission.
+        </p>
+      
+        <h4>🛰️ Why WSNs Are Ideal for Health Monitoring</h4>
+        <p>
+          Wireless Sensor Networks (WSNs) provide an ideal solution for monitoring astronauts' health in space environments. WSNs can:
+        </p>
+        <ul>
+          <li>Measure vital signs with wearable sensors</li>
+          <li>Transmit data wirelessly to the onboard system for real-time analysis</li>
+          <li>Provide continuous and non-intrusive health monitoring</li>
+          <li>Alert astronauts or ground control in case of an abnormality</li>
+        </ul>
+      
+        <h4>🔧 Example Sensors You Can Use</h4>
+        <table border="1" cellpadding="6" style="border-collapse: collapse;">
+          <tr><th>Sensor Type</th><th>What It Measures</th><th>Use</th></tr>
+          <tr><td>Pulse Sensor</td><td>Heart rate</td><td>Monitor cardiovascular health</td></tr>
+          <tr><td>SpO₂ Sensor</td><td>Oxygen saturation</td><td>Monitor breathing and oxygen levels</td></tr>
+          <tr><td>Blood Pressure Monitor</td><td>Blood pressure</td><td>Check cardiovascular health</td></tr>
+          <tr><td>Temperature Sensor</td><td>Body temperature</td><td>Detect fever or temperature imbalances</td></tr>
+        </table>
+      
+        <h4>✅ Advantages of WSNs in Health Monitoring</h4>
+        <ul>
+          <li>Continuous health monitoring without the need for manual measurements</li>
+          <li>Non-intrusive sensors that can be worn or embedded in astronaut clothing</li>
+          <li>Data can be transmitted in real-time to a central system for immediate analysis</li>
+          <li>Alerts can be triggered in case of abnormal health parameters, ensuring quick intervention</li>
+        </ul>
+      
+        <h4>❌ Why It’s Not Fully Used in Space Yet</h4>
+        <ul>
+          <li>Space systems must be extremely reliable; there cannot be any false alarms or missed health indicators</li>
+          <li>Long-term powering of sensors can be difficult in space</li>
+          <li>Some sensors may not perform well in microgravity or harsh space environments</li>
+          <li>Radiation in space can affect sensor performance and data accuracy</li>
+        </ul>
+      
+        <h4>🌍 Your Simulation Idea</h4>
+        <ul>
+          <li>Use pulse sensors to track heart rate and SpO₂ levels</li>
+          <li>Simulate health data with Arduino or ESP32</li>
+          <li>Create a dashboard with ThingSpeak or Blynk to visualize real-time health data</li>
+          <li>Include alerts (Red/Green) based on abnormal readings for health parameters</li>
+        </ul>
+      
+        <h4>💡 Let me know if you'd like:</h4>
+        <ul>
+          <li>A complete circuit diagram for health monitoring sensors</li>
+          <li>Code for Arduino/ESP32 to read and transmit health data</li>
+          <li>A dashboard UI design for monitoring astronaut health</li>
+          <li>PowerPoint explanation for the health monitoring system setup</li>
+        </ul>
+      </div>
+      
+      <button class="read-more" onclick="toggleText('more4')">Read More</button>
+    </section>
+
+    <script>
+      function toggleText(id) {
+        const content = document.getElementById(id);
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
